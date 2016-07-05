@@ -19,46 +19,12 @@
         </div>
 
         <div>
-            <label for="tel_participant">{LANG_numero_tel}&#8239:</label>
-            <input name="tel_participant" type="text" class="champFormulaire" id="tel_participant"  tabindex="3" value="{tel}" size="40" placeholder="{LANG_numero_tel}" required>
-            {tel_valid}
-        </div>
-
-        <div>
             <label for="email_participant">{LANG_adresse_email}&#8239:</label>
             <input name="email_participant" type="email" class="champFormulaire" id="email_participant"  tabindex="4" value="{email}" size="40" placeholder="{LANG_adresse_email}" required>
             {email_valid}
         </div>
     </fieldset>
-    
-        <fieldset>
-        <legend>{LANG_compte_creer_coordonnees}</legend>
-        <div>
-            <label for="adresse_participant">{LANG_votre_adresse}&#8239:</label>
-            <input name="adresse_participant" type="text" class="champFormulaire" id="adresse_participant"  tabindex="5" value="{adresse}" placeholder="{LANG_votre_adresse}" size="40" required>
-            {adresse_valid}
-        </div>
 
-        <div>
-            <label for="cp_participant">{LANG_votre_cp}&#8239:</label>
-            <input name="cp_participant" type="text" class="champFormulaire" id="cp_participant"  tabindex="6" value="{cp}" size="40" placeholder="{LANG_votre_cp}" required>
-            {cp_valid}
-        </div>
-
-        <div>
-            <label for="ville_participant">{LANG_votre_ville}&#8239:</label>
-            <input name="ville_participant" type="text" class="champFormulaire" id="ville_participant"  tabindex="7" value="{ville}" size="40" placeholder="{LANG_votre_ville}" required>
-            {ville_valid}
-        </div>
-
-        <div>
-            <label for="pays">{LANG_votre_pays}&#8239:</label>
-            <select name="pays_participant" id="pays" tabindex="8">
-                {pays_liste}
-            </select>
-        </div>
-    </fieldset>
-    
     <fieldset>
         <legend>{LANG_compte_creer_securite}</legend>
         <div>
@@ -102,6 +68,8 @@
             <input name="commentaire" type="text" class="champFormulaire" id="commentaire"  tabindex="15" value="{commentaire}" size="50" maxlength="250" placeholder="{LANG_commentaire_participant}">
         </div>
     </fieldset>
+    
+    <div id="map"></div>
 
     <div class="bouton_form">
         <input type="submit" tabindex="16"  name="Submit23" value="{LANG_bouton_terminer}">
@@ -110,3 +78,4 @@
         <input name="modification" type="hidden" id="envoi5" value="{modification}"/>
     </div>
 
+</form>
