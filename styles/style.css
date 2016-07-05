@@ -1,0 +1,499 @@
+/*
+Styles pour les balises
+*/
+html, body {
+	background-image: url(image/haut.gif); 
+	background-repeat: repeat-x;
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #333333;
+}
+
+header {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid #888;
+    margin-bottom: 2em;
+}
+
+footer {
+    display: block;
+    position: relative;
+    clear: left;
+    margin-top: 2vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+caption {
+  font-size: 1.5em;
+}
+
+
+/*
+Styles pour la page d'accueil
+*/
+
+#etape ol {
+    counter-reset: etape;
+    margin-bottom: 3em;
+} /* on initialise et nomme un compteur */
+
+#etape ol li {
+    list-style-type: none;
+    counter-increment: etape; /* on incrémente le compteur à chaque nouveau li */
+    margin-bottom: 2em;
+}
+
+#etape ol li:before {
+    content: counter(etape); /* on affiche le compteur */
+    padding: 0 1em 0 1em;
+    margin-right: 8px;
+    vertical-align: top;
+    
+    background: #7db9e8;
+    background: -moz-linear-gradient(top, #7db9e8 0%, #2989d8 50%, #1e5799 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(50%,#2989d8), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    
+    border: solid 2px #0000FF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    height: 1em;
+    line-height: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;		
+}
+
+/*
+Styles pour le menu de la section compte.
+*/
+
+#menu_compte {
+    display: block;
+    position: relative;
+    margin: 0 0 2em 0;
+}
+
+#menu_compte_accueil {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 100%;
+}
+
+.cadre_accueil {
+    display: block;
+    position: relative;
+    float: left;
+    width: 45%;
+    min-height: 20em;
+    padding: 1em;
+    border: solid 5px grey;
+    border-radius: 50px;
+}
+
+#evenement_a_venir {
+    margin-right: 2%;
+}
+
+/*
+Styles pour la zone de connexion 
+*/
+
+#form_connexion, #bouton_deconnexion {
+    display: block;
+    position: absolute;
+    float: right;
+    top: 5vh;
+    right: 0;
+}
+
+#form_connexion p {
+    font-size: 0.5em;
+    text-align: right;
+    color: red;
+}
+
+#form_connexion p a {
+    text-decoration: none;
+    color: #888;
+}
+
+.participez {
+    display: inline-block;
+    position: relative;
+    width: 40vw;
+    //border: solid 1px black;
+}
+
+
+/*
+Styles pour les formulaires.
+*/
+
+
+fieldset {
+    display: block;
+    position: relative;
+    float: left;
+    width: 40vw;
+    min-height: 20vh;
+    border-radius: 20px;
+    margin: 0 2vw 2vh 0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    min-width: 15em;
+}
+
+fieldset div {
+    display: block;
+    position: relative;
+    margin-bottom: 1vh;
+}
+
+.bouton_form {
+    display: block;
+    position: relative;
+    float: none;
+    clear: left;
+}
+
+.information_input {
+    display: block;
+    position: relative;
+    top: -1vh;
+    font-size: 11px;
+    color: #999999;
+}
+
+/*
+Styles pour les cartes.
+*/
+
+#map {
+    display: block;
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    border: black solid 1px;
+}
+
+/*
+* Styles pour les événements
+*/
+
+#ajuster, .bouton {
+    display: block;
+    position: relative;
+    min-width: 5em;
+    max-width: 10em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 2em;
+    
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    border: solid 2px #0000FF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    background: #7db9e8; /* Old browsers */
+    background: -moz-linear-gradient(top, #7db9e8 0%, #2989d8 50%, #1e5799 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(50%,#2989d8), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+}
+
+.bouton:link, .bouton:hover, .bouton:focus, .bouton:visited  {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+
+/*
+* Styles pour la liste des événements
+*/
+/*
+.liste_evenement {
+    display: table;
+    position: relative;
+    width: 100%;
+    text-align: justify;
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+*/
+.liste_evenement div {
+    display: inline-block;
+    min-height: 3em;
+    vertical-align: top;
+    margin-bottom: 1em;
+}
+.detail_evenement {
+     width: 6em;
+}
+
+.titre_evenement {
+    width: 15em;
+}
+
+.info_evenement {
+    width: 30%;
+}
+
+.stat_evenement {
+    width: 10em;
+}
+
+/*
+*/
+.baseline{
+	font-size: 18px;
+	color: #29ABE2;
+	font-weight: bold;
+}
+.accueil{
+	font-size: 18px;
+	color: #F99019;
+	font-weight: bold;
+}
+.texte { 
+	font-size: 12px;
+	color: #333333;
+ } 
+.description { 
+	font-size: 11px;
+	color: #666666;
+ } 
+a:link {
+	font-size: 12px;
+	color: #6191B7;
+	text-decoration: underline;
+}
+a:visited {
+	font-size: 12px;
+	text-decoration: underline;
+	color: #6191B7;
+}
+a:hover {
+	font-size: 12px;
+	text-decoration: underline;
+	color: #044A81;
+}
+.champFormulaire {
+	border: 1px solid #326F9E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+.lien {
+	border: 1px solid #326F9E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+.champFormulaire:focus {
+	border: 1px solid #326F9E;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background-color: #ebf5ff;
+}
+.vert{
+	font-size: 12px;
+	color: #009900;
+	font-weight: normal;
+	background-color: #BCFDC6;
+	padding: 2px;
+
+}.rouge{
+	font-size: 12px;
+	color: #FF0000;
+	font-weight: normal;
+	background-color: #FDBCBC;
+	padding: 2px;
+}
+
+.gris{
+	background-color: #E1E0E0;
+	padding: 10px;
+}
+
+.titre {
+	font-size: 16px;
+	font-weight: bold;
+}
+h3.texte {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.liste_evenements {
+	font-size: 14px;
+	font-weight: bold;
+	color: #356FA1;
+	padding-right: 5px;
+}
+
+.titrevert {
+	font-size: 16px;
+	font-weight: bold;
+	color: #009900;
+	border: 1px solid #326F9E;
+	background-color: #BCFDC6;
+}
+.champCache {
+	background-color: #FFFFFF;
+	border: none;
+	color: #FFFFFF;
+}
+
+.infobulle{
+	font-size: 12px;
+	color: #073c65;
+}
+.commentaire{
+	font-size: 12px;
+	color: #073c65;
+	font-style: italic;
+}
+
+.bas {
+	background-image: url(image/bas.gif);
+	background-repeat: repeat-x;
+}
+.cree_par {
+	font-size: 11px;
+	color: #999999;
+	text-align: right;
+ } 
+.basdepage {
+	font-size: 11px;
+	color: #999999;
+ } 
+a.basdepage {
+	font-size: 11px;
+	color: #999999;
+	text-decoration:none;
+ } 
+a.basdepage:hover {
+	font-size: 11px;
+	color: #3270A1;
+	text-decoration:underline;
+ } 
+.basdepage_souligne {
+	font-size: 11px;
+	color: #999999;
+ } 
+.basdepage_souligne {
+	font-size: 11px;
+	color: #999999;
+ } 
+a.basdepage_souligne {
+	font-size: 11px;
+	color: #999999;
+	text-decoration:underline;
+ } 
+a.basdepage_souligne:hover {
+	font-size: 11px;
+	color: #3270A1;
+	text-decoration:underline;
+ } 
+
+#container {
+    position: relative;
+    /*min-height: 100%;*/
+    width: 90vw;
+    margin: auto;
+}
+#content {
+    padding: 0px;
+    padding-bottom: 48px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0px;
+    width: 100%;
+}
+
+#trace {
+    position: relative;
+    min-height: 100%;
+    background-image: url(image/trace.jpg);
+    width: 790px;
+    background-repeat: no-repeat;
+    height: 460px;
+}
+.bandeau{
+    background-image: url(image/titre.jpg);
+    background-repeat: no-repeat;
+}
+
+//Ajuster événement
+
+     #Container {
+     position:relative;
+     border: 1px solid #000;
+     width:720px;
+     height:370px;
+     margin:-5px 5px 5px -5px;
+     z-index:2;
+     }
+     
+#EmplacementDeMacarte {
+    display: block;
+    position: relative;
+//     float: left;
+     width: 790px;
+     height: 450px;
+     border: solid 1px black;
+}
+     
+     #EmplacementDeLaListe {
+     overflow: auto;
+     width: 250px;
+     height: 370px;
+     border: none;
+     background-color: #fff;
+     }
+     
+     #EmplacementDeLaListe a{
+         text-decoration: none;
+     }
+     
+.Style2 {
+    font-size: 8px
+}
