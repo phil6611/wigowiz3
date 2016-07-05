@@ -14,7 +14,7 @@ if (isset($_SESSION['langue'])){
 $action = filter_input(INPUT_GET, "a", FILTER_SANITIZE_STRING);
 
 
-//Inclusion du fichier pour les différentes fonction.
+//Inclusion du fichier pour les différentes fonctions.
 include_once './modules/configuration/configuration.php';
 include_once './modules/email/email.php';
 include_once './modules/fonctions/fonctions.php';
@@ -173,6 +173,8 @@ $template_texte = [
     "{LANG_liens}" => $LANG_liens
 ];
 
+//On génére le code HTML.
 $html_final = $moteur->remplace($template_texte, $html_template);
 
+//On renvoie la page HTML au client.
 echo $html_final;
