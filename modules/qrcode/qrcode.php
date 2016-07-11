@@ -1,7 +1,7 @@
 <?php
 
 //Inclusion de la bibliothèque pour la qrcode.
-require_once ('./phpqrcode/qrlib.php');
+require_once ('../vendor/phpqrcode/qrlib.php');
 
 //Récupération de l'identifiant de la carte
 $carte = filter_input(INPUT_GET, "carte", FILTER_SANITIZE_STRING);
@@ -14,6 +14,3 @@ $url = "http://wigowiz.addicterra.fr/index.php?a=carte&include=default&m=".$cart
 // outputs image directly into browser, as PNG stream
 //QRcode::png($url);
 QRcode::png($url, $outfile = false, $level = QR_ECLEVEL_H, $size);
-
-
-?>
