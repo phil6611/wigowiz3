@@ -83,7 +83,8 @@ if ($inscription === TRUE){
                     "sujet" => $LANG_mail_alerte,
                     "message" => $LANG_mail_alerte_contenu 
                 ];
-                send_email($tableau_email);
+                $email = new email();
+                $email -> send_email($tableau_email);
             }
             
             //Redirection vers la page permettant d'afficher la carte une fois inscrit.

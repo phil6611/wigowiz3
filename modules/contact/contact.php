@@ -66,7 +66,8 @@ if($envoi == "ok"){
         ];
         //Envoie de l'email.
         //mail("philippe.poisse@addicterra.fr","Contact - wigowiz",$message,$entete);
-        send_email($tableau_email);
+        $email = new email();
+        $email -> send_email($tableau_email);
         //Fichier html
         $html_code = file_get_contents($html_code_merci);
         

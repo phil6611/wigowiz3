@@ -203,7 +203,8 @@ if($envoi == "TRUE"){
                 "message" => $LANG_mail_inscription_message
             ];
             if ($modification == "creation") {
-                send_email($tableau_email);
+                $email = new email();
+                $email -> send_email($tableau_email);
             }
             
             //Redirection une fois le compte crée ou mis à jour.
