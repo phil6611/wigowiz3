@@ -39,6 +39,7 @@
  * liens
  * login
  * message
+ * messages d'erreur
  * password
  * recherche
  * qrcode
@@ -499,6 +500,12 @@ $LANG_message_lire_expediteur = "Expéditeur&#8239;:";
 $LANG_message_lire_date = "Date&#8239;:";
 $LANG_message_lire_evenement = "Événement&#8239;:";
 
+
+/*
+ * Messages d'erreur
+ */
+
+$LANG_messages_erreur_carte_simple = "Impossible de charger les données";
 
 /*
  * Modules "password"
