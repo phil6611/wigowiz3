@@ -179,7 +179,7 @@ class evenement {
 }
 
 /*
- * Cette classe sert pour les calcul de distance.
+ * Cette classe sert pour les calculs de distance.
  */
 
 class distance {
@@ -275,4 +275,32 @@ class distance {
         //renvoie du résultat de la fonction.
         return $coordonnees;
     }
+}
+
+/*
+ * Cette classe sert pour la gestion des emails
+ */
+
+class email {
+    
+    public function send_email($tableau_email) {
+        //Cette méthode sert à envoyer un email.
+        
+        //Liste des variables pour envoyer l'email.
+        $expediteur = $tableau_email['expediteur'];
+        $destinataire = $tableau_email['destinataire'];
+        $sujet = $tableau_email['sujet'];
+        $message = $tableau_email['message'];
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf8' . "\r\n";
+        
+        // En-têtes additionnels
+        $headers .= 'From: '.$expediteur . "\r\n";
+        $headers .= "Reply-To: ".$expediteur."\r\n";
+
+
+        //Envoie de l'email.
+        mail($destinataire, $sujet, $message, $headers);
+    }
+    
 }
