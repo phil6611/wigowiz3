@@ -1,17 +1,28 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 /**
  * Description of geojson
  *
- * @author perpinux
+ * @author Philippe Poisse
+ * @version 1 juillet 2016
+ * 
  */
+
+
 class geojson {
-    //put your code here
+    
+    
+    public function liste_participants($evenement, $pdo) {
+        //Cette méthode sert à générer la liste de tous les participants à un événement.
+    }
+    
+    public function liste_voitures($evenement, $pdo) {
+        //Cette méthode sert à générer la liste des participants ayant une voiture.
+    
+    }
+    
+    public function liste_pietons($evenement, $pdo) {
+        //Cette méthode sert à générer la liste des participants n'ayant pas de voiture.
+    }
+    
 }
