@@ -4,7 +4,7 @@
  * Description of geojson
  *
  * @author Philippe Poisse
- * @version 1 juillet 2016
+ * @version 1 : juillet 2016
  * 
  */
 
@@ -15,7 +15,7 @@ class geojson {
      * Cette section concerne les gabarits pour les fichiers geojson.
      */
     
-    var $tableau_geojson = "\t\t{
+    public $tableau_geojson = "\t\t{
                         \"type\": \"Feature\",
                         \"id\": \"node/{{id}}\",
                         \"properties\": {
@@ -57,7 +57,7 @@ class geojson {
 
 
             //Contenu du tableau.
-            $tableau_geojson = NULL;
+            $geojson = NULL;
             foreach ($donnees as $key) {
                 //Données pour le tableay GEOJSON.
                 $id = $key['id_participant'];
@@ -71,24 +71,14 @@ class geojson {
                     $texte_vehicule = "A un véhicule";
                 }
 
-                $tableau_geojson .= "\t\t{
-                        \"type\": \"Feature\",
-                        \"id\": \"node/".$id."\",
-                        \"properties\": {
-                          \"@id\": \"node/".$id."\",
-                          \"vehicule\": \"".$texte_vehicule."\"
-                        },
-                        \"geometry\": {
-                          \"type\": \"Point\",
-                          \"coordinates\": [
-                            $lng ,
-                            $lat
-                          ]
-                        }
-                      },\n\r"; 
+                $cherche = array("{{id}}", "{{texet_vehicule}}", "{{lng}}","{{lat}}");
+                $remplace = array($id, $texte_vehicule, $lng, $lat);
+        
+                $geojson .= str_replace($cherche, $remplace, $this->tableau_geojson);
+                
+                return $geojson;
+                
             }
-
-
 
         } catch (Exception $ex) {
             echo $error;
@@ -98,10 +88,14 @@ class geojson {
         
     }
     
+    
+    
     public function liste_voitures($id_evenement, $dbh) {
         //Cette méthode sert à générer la liste des participants ayant une voiture.
     
     }
+    
+    
     
     public function liste_pietons($id_evenement, $dbh) {
         //Cette méthode sert à générer la liste des participants n'ayant pas de voiture.
