@@ -278,6 +278,32 @@ td, th {
 }
 
 /*
+* Style pour la page de création des comptes
+*/
+
+#creationCompte fieldset  {
+    display: block;
+    position: relative;
+    border: none;
+    float: none;
+    width: 40%;
+    
+    
+}
+
+#creationCompte #map {
+    display: block;
+    position: relative;
+    width: 45%;
+    float: right;
+    
+}
+
+
+
+
+
+/*
 */
 .baseline{
 	font-size: 18px;
