@@ -16,8 +16,8 @@ $action = filter_input(INPUT_GET, "a", FILTER_SANITIZE_STRING);
 
 //Inclusion du fichier pour les différentes fonctions.
 include_once './modules/configuration/configuration.php';
-include_once './modules/email/email.php';
-include_once './modules/fonctions/fonctions.php';
+//include_once './modules/email/email.php';
+//include_once './modules/fonctions/fonctions.php';
 //Inclusion du fichier pour les textes.
 include_once './languages/lang_'.$_SESSION['langue'].'.php';
 //Inclusion du fichier pour la connexion à la base de données.
