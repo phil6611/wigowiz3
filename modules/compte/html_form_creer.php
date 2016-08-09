@@ -2,7 +2,9 @@
 <h1>{titre}</h1>
 {texte}
 
-<form action="./index.php?a=compte&amp;&section=creer" method="post" autocomplete="off">
+<form action="./index.php?a=compte&amp;&section=creer" method="post" autocomplete="off" id="creationCompte">
+
+    <div id="map"></div>
 
     <fieldset>
         <legend>{LANG_compte_creer_civilite}</legend>
@@ -68,8 +70,6 @@
             <input name="commentaire" type="text" class="champFormulaire" id="commentaire"  tabindex="15" value="{commentaire}" size="50" maxlength="250" placeholder="{LANG_commentaire_participant}">
         </div>
     </fieldset>
-    
-    <div id="map"></div>
 
     <div class="bouton_form">
         <input type="submit" tabindex="16"  name="Submit23" value="{LANG_bouton_terminer}">
