@@ -304,3 +304,25 @@ class email {
     }
     
 }
+
+/*
+ * Cette classe sert pour la gestion de la sécurité (chiffrement, etc.)
+ */
+
+class securite {
+    
+    public function hashage($pwd) {
+        //Cette méthode sert pour hacher les mots de passe.
+        
+        //Sel
+        $salt = '$6$rounds=5000$usesomesillystringforsalt$';
+        
+        //Hachage du mot de passe
+        $mdp_crypt = crypt($pwd, $salt);
+        
+        //
+        return $mdp_crypt;
+    }
+    
+    
+}
