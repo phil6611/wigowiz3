@@ -8,6 +8,7 @@
 /*
  * Cette partie sert pour vérifier l'envoi ou non du formulaire. 
  */
+
 //Récupération de la variable $_POST
 $envoi = filter_input(INPUT_POST, "envoi", FILTER_SANITIZE_STRING);
 //récuparation de l'information sur le type d'action, il s'agit soit d'une création d'un compte soit d'une modification.
@@ -16,6 +17,7 @@ $modification = filter_input(INPUT_POST, "modification", FILTER_SANITIZE_STRING)
 /*
  * Cette partie concerne la création d'un nouveau compte dans la base de données.
  */
+
 if($envoi == "TRUE"){
     
     //Validation des données envoyées depuis le formulaire.
@@ -89,19 +91,8 @@ if($envoi == "TRUE"){
         //On géocode l'adresse.
         $adresse_gps = $adresse_sql.",".$cp_sql.",".$ville_sql.",".$pays_sql;
 
-        /* Version Google Maps
-         * $loc = geocode::getLocation($addresse_gps);
-         * $latitude = $loc["lat"];
-         * $longitude = $loc["lng"];
-        *
         //Localisation GPS à l'aide de Nominatim
-        $loc = $geocoder->geocode_nominatim($adresse_gps);
-        $longitude = $loc[0]->{'lon'};
-        $latitude = $loc[0]->{'lat'};
-        */
-        
-        //Localisation GPS à l'aide de Nominatim
-        $loc = $geocoder->geocode_nominatim($adresse_gps);
+        $loc = $geocoder -> geocode_nominatim($adresse_gps);
         if (empty($loc) ){
             $longitude = 1;
             $latitude = 42;
@@ -366,7 +357,9 @@ $texte_tableau = [
     "{commentaire}" => $commentaire,
     "{LANG_compte_creer_pays_defaut}" => $LANG_compte_creer_pays_defaut,
     "{pays_liste}" => $pays_liste,
-    "{modification}" => "creation"
+    "{modification}" => "creation",
+    "{{LANG_latitude}}" => $LANG_latitude,
+    "{{LANG_longitude}}" => $LANG_longitude
 ];
 
 //Renvoi du contenu HTML.
