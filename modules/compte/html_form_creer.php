@@ -2,7 +2,7 @@
 <h1>{titre}</h1>
 {texte}
 
-<form action="./index.php?a=compte&amp;&section=creer" method="post" autocomplete="off" id="creationCompte">
+<form name="formulaire" action="./index.php?a=compte&amp;&section=creer" method="post" autocomplete="off" id="creationCompte">
 
     <div id="map"></div>
 
@@ -25,6 +25,15 @@
             <input name="email_participant" type="email" class="champFormulaire" id="email_participant"  tabindex="4" value="{email}" size="40" placeholder="{LANG_adresse_email}" required>
             {email_valid}
         </div>
+        
+        <div>
+            <label for="lat">Votre latitude (cliquer sur la carte)</label>
+            <input type="text" class="champFormulaire" name="lat" id="lat" required />
+            <label for="lng"></label>
+            <input type="text" class="champFormulaire" name="lng" id="lng" required />
+        </div>
+        
+        
     </fieldset>
 
     <fieldset>
@@ -79,3 +88,5 @@
     </div>
 
 </form>
+
+<script type='text/javascript' src="./javascript/carte/creation.js"></script>
