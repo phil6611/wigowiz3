@@ -235,6 +235,8 @@ $LANG_cacher_mon_adresse = "masquer mon adresse sur la carte";
 $LANG_commentaire_participant = "Commentaire (il apparaitra à côté de vos coordonnées)";
 $LANG_bouton_terminer = "Terminer !";
 $LANG_bouton_annuler = "Annuler";
+$LANG_latitude = "Votre latitude (cliquer sur la carte)";
+$LANG_longitude = "Votre latitude (cliquer sur la carte)";
 //Section "ajuster".
 $LANG_deplacez_marqueur = "Cliquez pour déplacer votre marqueur sur la carte, et cliquez sur Validez pour enregistrer la nouvelle position";
 $LANG_modifier_votre_position = "Modifier votre position";
