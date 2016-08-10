@@ -214,6 +214,8 @@ $LANG_cacher_mon_adresse = "";
 $LANG_commentaire_participant = "";
 $LANG_bouton_terminer = "";
 $LANG_bouton_annuler = "";
+$LANG_latitude = "";
+$LANG_longitude = "";
 //Section "ajuster".
 $LANG_deplacez_marqueur = "";
 $LANG_modifier_votre_position = "";
