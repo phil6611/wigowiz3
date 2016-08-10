@@ -27,9 +27,9 @@
         </div>
         
         <div>
-            <label for="lat">Votre latitude (cliquer sur la carte)</label>
+            <label for="lat">{{LANG_latitude}}</label>
             <input type="text" class="champFormulaire" name="lat" id="lat" required />
-            <label for="lng"></label>
+            <label for="lng">{{LANG_longitude}}</label>
             <input type="text" class="champFormulaire" name="lng" id="lng" required />
         </div>
         
